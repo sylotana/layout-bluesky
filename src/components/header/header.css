@@ -9,14 +9,12 @@ body {
 }
 
 @media (width > 1440px) {
-
   body {
     background-color: #fff;
   }
 }
 
 @media (width > 1440px) {
-
   .header {
     background-color: #fff;
   }

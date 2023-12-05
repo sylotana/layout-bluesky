@@ -1,0 +1,28 @@
+{
+  "name": "layout-bluesky",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Привет!\"",
+    "pretty-check": "prettier --check \"./src/**/*.{html,css,js}\"",
+    "pretty-fix": "prettier --write \"./src/**/*.{html,css,js}\"",
+    "lint-check": "stylelint \"./src/**/*.css\"",
+    "lint-fix": "stylelint \"./src/**/*.css\" --fix",
+    "pretty-lint-fix": "npm run pretty-fix && npm run lint-fix",
+    "build": "npm run pretty-lint-fix && gulp build",
+    "dev": "gulp watchApp",
+    "commit": "npm run pretty-lint-fix && git add -A && git commit"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.29.3",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-concat-css": "^3.1.0",
+    "gulp-plumber": "^1.2.1",
+    "prettier": "^3.1.0",
+    "stylelint": "^15.11.0"
+  }
+}

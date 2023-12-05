@@ -17,12 +17,21 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "autoprefixer": "^10.4.16",
     "browser-sync": "^2.29.3",
+    "cssnano": "^6.0.1",
     "del": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-concat-css": "^3.1.0",
     "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^9.0.1",
+    "html-minifier": "^4.0.0",
+    "postcss": "^8.4.32",
+    "postcss-combine-media-query": "^1.0.1",
     "prettier": "^3.1.0",
     "stylelint": "^15.11.0"
-  }
+  },
+  "browserslist": [
+    "last 1 versions"
+  ]
 }

@@ -1,5 +1,5 @@
 {
-  "name": "layout-bluesky",
+  "name": "index",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -36,6 +36,6 @@
     "stylelint-config-standard-scss": "^9.0.0"
   },
   "browserslist": [
-    "last 5 versions"
+    "last 1 versions"
   ]
 }

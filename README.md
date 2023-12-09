@@ -1,1 +1,1 @@
-# layout-bluesky
+# odin-rock-paper-scissors

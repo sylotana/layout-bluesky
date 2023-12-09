@@ -62,7 +62,7 @@ function pug() {
   /**
    * Для минификации кода необходимо удалить аргумент функции gulpPug
    */
-  return gulp.src('./src/pages/**/*.pug')
+  return gulp.src('./src/views/*.pug')
     .pipe(gulpPug({
       pretty: true
     }))
@@ -111,12 +111,17 @@ function scss() {
 
 
 function assets() {
-  return gulp.src('./src/images/**/*.{jpg,png,svg,gif,ico,webp,avif}')
+  return gulp.src('./src/assets/**/*.{jpg,png,svg,gif,ico,webp,avif}')
     .pipe(gulp.dest('./build/images'))
     .pipe(browserSync.reload({stream: true}));
 }
 
 
+function scripts() {
+  return gulp.src('./src/scripts/**/*.js')
+    .pipe(gulp.dest('./build/'))
+    .pipe(browserSync.reload({stream: true}));
+}
 
 
 function clean() {
@@ -125,10 +130,11 @@ function clean() {
 
 
 function watchFiles() {
-  gulp.watch(['./src/pages/**/*.pug'], pug);
+  gulp.watch(['./src/views/**/*.pug'], pug);
   gulp.watch(['./src/**/*.html'], html);
   gulp.watch(['./src/**/*.scss'], scss);
   gulp.watch(['./src/**/*.css'], css);
+  gulp.watch(['./src/scripts/**/*.js'], scripts);
   gulp.watch(['./src/images/**/*.{jpg,png,svg,gif,ico,webp,avif}'], assets);
 }
 
@@ -182,7 +188,7 @@ exports.scss = scss;
  * Если верстка на HTML, то закомментировать pug, расскоментировать html
  * Если верстка на CSS, то закомментировать scss, расскоментировать css
  */
-const build = gulp.series(clean, gulp.parallel(/*html*/pug, /*css*/scss, assets));
+const build = gulp.series(clean, gulp.parallel(/*html*/pug, /*css*/scss, assets, scripts));
 exports.build = build;
 
 exports.watchApp = gulp.parallel(build, watchFiles, serve);

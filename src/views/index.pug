@@ -1,0 +1,16 @@
+extends template/_basic
+
+block variables
+  include pages/_pages-info
+  -
+    var page = 'index';
+    
+
+block header
+  include modules/header/_header
+
+block content
+  include pages/index/_index
+
+block footer
+  include modules/footer/_footer

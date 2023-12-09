@@ -1,0 +1,41 @@
+{
+  "name": "index",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Привет!\"",
+    "pretty-check": "prettier --check \"./src/**/*.{pug,html,scss,css,js}\"",
+    "pretty-fix": "prettier --write \"./src/**/*.{pug,html,scss,css,js}\"",
+    "lint-check": "stylelint \"./src/**/*.{scss,css}\"",
+    "lint-fix": "stylelint \"./src/**/*.{scss,css}\" --fix",
+    "pretty-lint-fix": "npm run pretty-fix && npm run lint-fix",
+    "build": "npm run pretty-lint-fix && gulp build",
+    "dev": "gulp watchApp"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@prettier/plugin-pug": "^2.5.2",
+    "autoprefixer": "^10.4.14",
+    "browser-sync": "^2.29.1",
+    "cssnano": "^6.0.1",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-concat-css": "^3.1.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^9.0.1",
+    "gulp-pug": "^5.0.0",
+    "gulp-sass": "^5.1.0",
+    "html-minifier": "^4.0.0",
+    "postcss": "^8.4.23",
+    "postcss-combine-media-query": "^1.0.1",
+    "prettier": "^2.8.8",
+    "sass": "^1.62.1",
+    "stylelint": "^15.4.0",
+    "stylelint-config-standard-scss": "^9.0.0"
+  },
+  "browserslist": [
+    "last 1 versions"
+  ]
+}

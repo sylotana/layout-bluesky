@@ -1,0 +1,31 @@
+//- ITEMPROP -\\
+meta(itemprop="description" content=PAGES[page].description)
+
+
+//- SEO BASIC -\\
+meta(name="description" content=PAGES[page].description)
+meta(name="author" content=PAGES[page].author)
+
+
+//- OG INFO -\\
+meta(propery="og:description" content=PAGES[page].description)
+meta(propery="og:type" content=PAGES[page].og_type)
+meta(propery="og:url" content=PAGES[page].og_url)
+meta(propery="og:title" content=PAGES[page].title)
+
+
+meta(propery="og:site_name" content=BASIC.og_site_name)
+meta(propery="og:locale" content=BASIC.og_locale)
+
+
+//- OG IMAGE -\\
+meta(propery="og:image" content=BASIC.og_image_url)
+meta(propery="og:image:secure_url" content=BASIC.og_image_url)
+meta(propery="og:image:type" content='image/jpeg')
+meta(propery="og:image:width" content='1200')
+meta(propery="og:image:height" content='630')
+meta(propery="og:image:alt" content=BASIC.og_image_alt)
+
+
+//- TITLE -\\
+title=PAGES[page].title

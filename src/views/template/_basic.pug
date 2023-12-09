@@ -1,0 +1,27 @@
+block variables
+
+doctype html
+html(lang=BASIC.lang class='page')
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    meta(name="color-scheme" content="light dark")
+
+    //- META INFO -//
+    include _metainfo
+    
+
+    link(rel="stylesheet" href="bundle.css")
+
+
+  body(class='page__body')
+
+    block header
+
+    block content
+
+    block footer
+
+    script(src="app.js")
+    block scripts
+

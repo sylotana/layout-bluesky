@@ -1,2 +1,43 @@
-main.page
+main
+  img(src="images/cover.png", width="300", height="100" alt="Profile cover.")
+  img(src="images/avatar.png", width="80", height="80" alt="Profile avatar.")
   
+  h1
+    | Vadim Makeev
+  
+  p
+    | @pepelsbey.dev
+  
+  ul
+    li
+      a
+        | 9 followers
+    li
+      a
+        | 28 following
+    li
+      | 0 posts
+
+  p
+    | Frontend developer in love with the Web, browsers, bicycles, and podcasting. He/him, Google Developer Expert, co-host of The F-Word podcast.
+
+  ul
+    li
+      button(type="button")
+        | Posts
+    li
+      button(type="button")
+        | Posts & replices
+    li
+      button(type="button")
+        | Media
+  
+  section
+    p
+      | No posts yet!
+  section(hidden)
+    p
+      | No posts & replices yet!
+  section(hidden)
+    p
+      | No media yet!

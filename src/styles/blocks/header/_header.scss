@@ -1,0 +1,22 @@
+.header {
+
+
+
+
+  // MOBILE
+  @media (width < 1230px) {
+
+    &__avatar {
+      display: none;
+    }
+    
+  }
+
+
+  // DESKTOP
+  @media (width >= 1230px) {
+
+  }
+
+
+}

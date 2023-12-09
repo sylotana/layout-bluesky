@@ -1,3 +1,41 @@
-include _variables
+//- include _variables
 header.header
-  h1=title
+  nav
+    a.header__avatar
+      img(src="images/avatar.png", width="64", height="64", alt="Profile avatar.")
+
+    ul.header__navigation
+      li
+        a(href="")
+          include ../../../assets/images/icons/home.svg
+          | Home
+      li
+        a(href="")
+          include ../../../assets/images/icons/search.svg
+          | Search
+      li
+        a(href="")
+          include ../../../assets/images/icons/feeds.svg
+          | My Feeds
+      li
+        a(href="")
+          include ../../../assets/images/icons/notifications.svg
+          | Notifications
+      li
+        a(href="")
+          include ../../../assets/images/icons/moderation.svg
+          | Moderation
+      li
+        a(href="")
+          include ../../../assets/images/icons/profile.svg
+          | Profile
+      li
+        a(href="")
+          include ../../../assets/images/icons/settings.svg
+          | Settings
+  
+  button(type="button").header__button
+    | New post
+  button(type="button").header__back
+    include ../../../assets/images/icons/back.svg
+    

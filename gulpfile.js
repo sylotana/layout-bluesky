@@ -63,9 +63,9 @@ function pug() {
    * Для минификации кода необходимо удалить аргумент функции gulpPug
    */
   return gulp.src('./src/views/*.pug')
-    .pipe(gulpPug({
+    .pipe(gulpPug(/*{
       pretty: true
-    }))
+    }*/))
     .pipe(gulp.dest('./build/'))
     .pipe(browserSync.reload({stream: true}));
 }
@@ -86,7 +86,7 @@ function css() {
     mediaquery(),
     cssnano()
   ]
-  return gulp.src('./src/**/*.css')
+  return gulp.src('./src/styles/**/*.css')
     .pipe(plumber())
     .pipe(concatCSS('bundle.css'))
     .pipe(postcss(plugins))
@@ -101,18 +101,18 @@ function scss() {
     mediaquery(),
     cssnano()
   ]
-  return gulp.src('./src/**/*.scss')
+  return gulp.src('./src/styles/**/*.scss')
     .pipe(sass())
-    .pipe(concatCSS('bundle.css'))
+    // .pipe(concatCSS('main.css'))
     .pipe(postcss(plugins))
-    .pipe(gulp.dest('./build/'))
+    .pipe(gulp.dest('./build/styles/'))
     .pipe(browserSync.reload({stream: true}));
 }
 
 
 function assets() {
-  return gulp.src('./src/assets/**/*.{jpg,png,svg,gif,ico,webp,avif}')
-    .pipe(gulp.dest('./build/images'))
+  return gulp.src('./src/assets/images/*.{jpg,png,svg,gif,ico,webp,avif}')
+    .pipe(gulp.dest('./build/images/'))
     .pipe(browserSync.reload({stream: true}));
 }
 
@@ -135,7 +135,7 @@ function watchFiles() {
   gulp.watch(['./src/**/*.scss'], scss);
   gulp.watch(['./src/**/*.css'], css);
   gulp.watch(['./src/scripts/**/*.js'], scripts);
-  gulp.watch(['./src/images/**/*.{jpg,png,svg,gif,ico,webp,avif}'], assets);
+  gulp.watch(['./src/assets/images/**/*.{jpg,png,svg,gif,ico,webp,avif}'], assets);
 }
 
 

@@ -1,0 +1,42 @@
+.new-post {
+  margin: 0;
+  padding: 0;
+  border: none;
+  color: rgb(var(--color-white));
+  background: linear-gradient(
+    136.8deg,
+    rgb(var(--color-sky)),
+    rgb(var(--color-blue))
+  );
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+
+  @media (width < 1230px) {
+    inline-size: 60px;
+    block-size: 60px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 114px;
+    right: 24px;
+  }
+
+  @media (width >= 1230px) {
+    background: rgb(var(--color-blue));
+  }
+
+  // ICON
+  &__icon {
+    display: block;
+  }
+
+  // TEXT
+  &__text {
+    @media (width < 1230px) {
+      position: absolute;
+      inline-size: 1px;
+      block-size: 1px;
+      opacity: 0;
+    }
+  }
+}

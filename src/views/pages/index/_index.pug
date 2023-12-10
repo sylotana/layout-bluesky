@@ -1,43 +1,109 @@
-main
-  img(src="images/cover.png", width="300", height="100" alt="Profile cover.")
-  img(src="images/avatar.png", width="80", height="80" alt="Profile avatar.")
-  
-  h1
-    | Vadim Makeev
-  
-  p
-    | @pepelsbey.dev
-  
-  ul
-    li
-      a
-        | 9 followers
-    li
-      a
-        | 28 following
-    li
-      | 0 posts
+<main class="page__main">
 
-  p
-    | Frontend developer in love with the Web, browsers, bicycles, and podcasting. He/him, Google Developer Expert, co-host of The F-Word podcast.
+  <div class="profile">
 
-  ul
-    li
-      button(type="button")
-        | Posts
-    li
-      button(type="button")
-        | Posts & replices
-    li
-      button(type="button")
-        | Media
-  
-  section
-    p
-      | No posts yet!
-  section(hidden)
-    p
-      | No posts & replices yet!
-  section(hidden)
-    p
-      | No media yet!
+    <button class="profile__back-button back-button" type="button">
+      <svg class="back-button__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" height="18" width="18">
+        <path fill="currentColor" d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/>
+      </svg>
+    </button>
+
+    <img class="profile__cover" src="images/cover.jpg" width="300" height="100" alt="Profile cover.">
+    <img class="profile__avatar" src="images/avatar.jpg" width="80" height="80" alt="Profile avatar.">
+
+    <div class="profile__controls">
+      <button class="profile__button profile__button--text" type="button">
+        | Edit Profile
+      </button>
+      <button class="profile__button profile__button--icon" type="button" aria-label="More...">
+        <svg class="profile__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="20" width="20">
+          <path fill="currentColor" d="M8 256a56 56 0 1 1 112 0A56 56 0 1 1 8 256zm160 0a56 56 0 1 1 112 0 56 56 0 1 1 -112 0zm216-56a56 56 0 1 1 0 112 56 56 0 1 1 0-112z"/>
+        </svg>        
+      </button>
+    </div>
+  </div>
+
+  <div class="user-info">
+    <h1 class="user-info__name">Anatoly Shangin</h1>
+    <p class="user-info__nick">@sylotana</p>
+    <ul class="user-info__stats">
+      <li class="user-info__stats-item">
+        <a class="user-info__link" href="">
+          <span class="user-info__stats-number">18</span> followers 
+        </a>
+      </li>  
+      <li class="user-info__stats-item">
+        <a class="user-info__link" href="">
+          <span class="user-info__stats-number">40</span> following 
+        </a>
+      </li>  
+      <li class="user-info__stats-item">
+        <span class="user-info__stats-number">9</span> posts
+      </li>  
+    </ul>
+
+    <p class="user-info__bio">Frontend developer in love with the Web, browsers, bicycles, and podcasting. He/him, Google Developer Expert, co-host of The F-Word podcast.</p>
+  </div>
+
+  <div class="timeline">
+    <ul class="timeline__tabs" role="tablist">
+      <li class="timeline__tabs-item">
+        <button class="timeline__tabs-button" type="button" id="timeline-posts-tab" role="tab" aria-selected="true" aria-controls="timeline-posts-panel">Posts</button>
+      </li>
+      <li class="timeline__tabs-item">
+        <button class="timeline__tabs-button" type="button" id="timeline-posts-and-replies-tab" role="tab" aria-selected="false" aria-controls="timeline-posts-and-replies-panel">Posts & replies</button>
+      </li>
+      <li class="timeline__tabs-item">
+        <button class="timeline__tabs-button" type="button" id="timeline-media-tab" role="tab" aria-selected="false" aria-controls="timeline-media-panel">Media</button>
+      </li>
+      <li class="timeline__tabs-item">
+        <button class="timeline__tabs-button" type="button" id="timeline-likes-tab" role="tab" aria-selected="false" aria-controls="timeline-likes-panel">Likes</button>
+      </li>
+      <li class="timeline__tabs-item">
+        <button class="timeline__tabs-button" type="button" id="timeline-dislikes-tab" role="tab" aria-selected="false" aria-controls="timeline-dislikes-panel">Dislikes</button>
+      </li>
+    </ul>
+
+    <section class="timeline__section" role="tabpanel" tabindex="0" aria-labelledby="timeline-posts-tab" id="timeline-posts-panel">
+      <p class="timeline__no-content">
+        <svg class="timeline__no-content-icon" viewBox="0 0 512 512" height="64" width="64">
+          <path fill="currentColor" d="M160 368c26.5 0 48 21.5 48 48v16l72.5-54.4c8.3-6.2 18.4-9.6 28.8-9.6H448c8.8 0 16-7.2 16-16V64c0-8.8-7.2-16-16-16H64c-8.8 0-16 7.2-16 16V352c0 8.8 7.2 16 16 16h96zm48 124l-.2 .2-5.1 3.8-17.1 12.8c-4.8 3.6-11.3 4.2-16.8 1.5s-8.8-8.2-8.8-14.3V474.7v-6.4V468v-4V416H112 64c-35.3 0-64-28.7-64-64V64C0 28.7 28.7 0 64 0H448c35.3 0 64 28.7 64 64V352c0 35.3-28.7 64-64 64H309.3L208 492z"/>
+        </svg>        
+        | No posts yet!
+      </p>
+    </section>
+    <section class="timeline__section" role="tabpanel" tabindex="0" aria-labelledby="timeline-posts-and-replies-tab" id="timeline-posts-and-replies-panel" hidden>
+      <p class="timeline__no-content">
+        <svg class="timeline__no-content-icon" viewBox="0 0 512 512" height="64" width="64">
+          <path fill="currentColor" d="M160 368c26.5 0 48 21.5 48 48v16l72.5-54.4c8.3-6.2 18.4-9.6 28.8-9.6H448c8.8 0 16-7.2 16-16V64c0-8.8-7.2-16-16-16H64c-8.8 0-16 7.2-16 16V352c0 8.8 7.2 16 16 16h96zm48 124l-.2 .2-5.1 3.8-17.1 12.8c-4.8 3.6-11.3 4.2-16.8 1.5s-8.8-8.2-8.8-14.3V474.7v-6.4V468v-4V416H112 64c-35.3 0-64-28.7-64-64V64C0 28.7 28.7 0 64 0H448c35.3 0 64 28.7 64 64V352c0 35.3-28.7 64-64 64H309.3L208 492z"/>
+        </svg>   
+        | No posts & replies yet!
+      </p>
+    </section>
+    <section class="timeline__section" role="tabpanel" tabindex="0" aria-labelledby="timeline-media-tab" id="timeline-media-panel" hidden>
+      <p class="timeline__no-content">
+        <svg class="timeline__no-content-icon" viewBox="0 0 512 512" height="64" width="64">
+          <path fill="currentColor" d="M160 368c26.5 0 48 21.5 48 48v16l72.5-54.4c8.3-6.2 18.4-9.6 28.8-9.6H448c8.8 0 16-7.2 16-16V64c0-8.8-7.2-16-16-16H64c-8.8 0-16 7.2-16 16V352c0 8.8 7.2 16 16 16h96zm48 124l-.2 .2-5.1 3.8-17.1 12.8c-4.8 3.6-11.3 4.2-16.8 1.5s-8.8-8.2-8.8-14.3V474.7v-6.4V468v-4V416H112 64c-35.3 0-64-28.7-64-64V64C0 28.7 28.7 0 64 0H448c35.3 0 64 28.7 64 64V352c0 35.3-28.7 64-64 64H309.3L208 492z"/>
+        </svg>   
+        | No media yet!
+      </p>
+    </section>
+    <section class="timeline__section" role="tabpanel" tabindex="0" aria-labelledby="timeline-likes-tab" id="timeline-likes-panel" hidden>
+      <p class="timeline__no-content">
+        <svg class="timeline__no-content-icon" viewBox="0 0 512 512" height="64" width="64">
+          <path fill="currentColor" d="M160 368c26.5 0 48 21.5 48 48v16l72.5-54.4c8.3-6.2 18.4-9.6 28.8-9.6H448c8.8 0 16-7.2 16-16V64c0-8.8-7.2-16-16-16H64c-8.8 0-16 7.2-16 16V352c0 8.8 7.2 16 16 16h96zm48 124l-.2 .2-5.1 3.8-17.1 12.8c-4.8 3.6-11.3 4.2-16.8 1.5s-8.8-8.2-8.8-14.3V474.7v-6.4V468v-4V416H112 64c-35.3 0-64-28.7-64-64V64C0 28.7 28.7 0 64 0H448c35.3 0 64 28.7 64 64V352c0 35.3-28.7 64-64 64H309.3L208 492z"/>
+        </svg>   
+        | No likes yet!
+      </p>
+    </section>
+    <section class="timeline__section" role="tabpanel" tabindex="0" aria-labelledby="timeline-dislikes-tab" id="timeline-dislikes-panel" hidden>
+      <p class="timeline__no-content">
+        <svg class="timeline__no-content-icon" viewBox="0 0 512 512" height="64" width="64">
+          <path fill="currentColor" d="M160 368c26.5 0 48 21.5 48 48v16l72.5-54.4c8.3-6.2 18.4-9.6 28.8-9.6H448c8.8 0 16-7.2 16-16V64c0-8.8-7.2-16-16-16H64c-8.8 0-16 7.2-16 16V352c0 8.8 7.2 16 16 16h96zm48 124l-.2 .2-5.1 3.8-17.1 12.8c-4.8 3.6-11.3 4.2-16.8 1.5s-8.8-8.2-8.8-14.3V474.7v-6.4V468v-4V416H112 64c-35.3 0-64-28.7-64-64V64C0 28.7 28.7 0 64 0H448c35.3 0 64 28.7 64 64V352c0 35.3-28.7 64-64 64H309.3L208 492z"/>
+        </svg>   
+        | No dislikes yet!
+      </p>
+    </section>
+  </div>
+
+</main>

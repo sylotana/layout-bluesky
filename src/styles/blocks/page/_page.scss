@@ -1,11 +1,36 @@
 .page {
   background-color: var(--color-back-primary);
   color: var(--color-text-primary);
-
   font-family: system-ui, sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.2;
+  height: 100%;
 
   &__body {
     margin: 0;
+    height: 100%;
+
+    @media (width >= $breakpoint) {
+      display: grid;
+      grid-template-columns: 1fr 600px 1fr;
+    }
   }
 
+  &__header {
+    @media (width >= $breakpoint) {
+      justify-self: end;
+    }
+  }
+
+  &__main {
+    @media (width >= $breakpoint) {
+      border-inline: 1px solid var(--color-border);
+    }
+  }
+
+  &__footer {
+    @media (width >= $breakpoint) {
+      justify-self: start;
+    }
+  }
 }

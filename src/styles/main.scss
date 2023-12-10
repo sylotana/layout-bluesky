@@ -1,8 +1,13 @@
-@import 'globals/_box-model';
-@import 'colors/_index';
-
+@import "globals/_box-model";
+@import "colors/_index";
 
 // BLOCKS
-@import 'blocks/header/_header';
-@import 'blocks/footer/_footer';
-@import 'blocks/page/_page';
+@import "blocks/page/_page";
+@import "blocks/header/_header";
+@import "blocks/navigation/_navigation";
+@import "blocks/profile/_profile";
+@import "blocks/user-info/_user-info";
+@import "blocks/timeline/_timeline";
+@import "blocks/new-post/_new-post";
+@import "blocks/back-button/_back-button";
+@import "blocks/footer/_footer";

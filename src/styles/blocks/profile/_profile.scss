@@ -1,0 +1,73 @@
+.profile {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-template-rows: 150px 42px;
+
+  @media (width < $breakpoint) {
+  }
+
+  @media (width >= $breakpoint) {
+  }
+
+  // __BACK-BUTTON
+  &__back-button {
+    position: absolute;
+
+    @media (width < $breakpoint) {
+      top: 12px;
+      left: 12px;
+    }
+  }
+
+  // __COVER
+  &__cover {
+    grid-column: span 2;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  // __AVATAR
+  &__avatar {
+    display: block;
+    margin-block-start: -40px;
+    margin-inline-start: 12px;
+    border-radius: 50%;
+    outline: 2px solid var(--color-back-primary);
+  }
+
+  // __CONTROLS
+  &__controls {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 6px;
+    padding-inline-end: 12px;
+    padding-block-start: 8px;
+  }
+
+  // __BUTTON
+  &__button {
+    cursor: pointer;
+    margin: 0;
+    border: none;
+    border-radius: 50px;
+    background-color: var(--color-back-secondary);
+    font-family: inherit;
+    font-size: 14px;
+
+    // --TEXT
+    &--text {
+      padding: 9px 24px;
+    }
+
+    &--icon {
+      padding: 5px 12px;
+    }
+  }
+
+  // __ICON
+  &__icon {
+    display: block;
+  }
+}

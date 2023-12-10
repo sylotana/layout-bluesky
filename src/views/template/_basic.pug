@@ -1,30 +1,31 @@
+include ../utils/_svgUse
 block variables
 
-doctype html
-html(lang=BASIC.lang).page
-  head
-    meta(charset="utf-8")
-    meta(name="viewport" content="width=device-width, initial-scale=1")
-    meta(name="color-scheme" content="light dark")
+<!DOCTYPE html>
+<html class="page" lang="#{ BASIC.lang }">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
 
     //- META INFO -\\
     include _metainfo
 
-    link(rel="stylesheet" href="./styles/main.css")
-    
+    <link rel="stylesheet" href="./styles/main.css">
+
     //- MORE -\\
     block more
 
-
-
-  body.page__body
-
+  </head>
+  <body class="page__body">
     block header
 
     block content
 
     block footer
 
-    script(src="app.js")
+    <script src="app.js"></script>
     block scripts
 
+  </body>
+</html>

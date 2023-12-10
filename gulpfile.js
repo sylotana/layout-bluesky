@@ -188,7 +188,7 @@ exports.scss = scss;
  * Если верстка на HTML, то закомментировать pug, расскоментировать html
  * Если верстка на CSS, то закомментировать scss, расскоментировать css
  */
-const build = gulp.series(clean, gulp.parallel(/*html*/pug, /*css*/scss, assets, scripts));
+const build = gulp.series(clean, gulp.parallel(/*html,*/ pug, /*css*/scss, assets, scripts));
 exports.build = build;
 
 exports.watchApp = gulp.parallel(build, watchFiles, serve);

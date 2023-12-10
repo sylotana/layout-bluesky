@@ -1,0 +1,20 @@
+.footer {
+  @media (width < $breakpoint) {
+    display: none;
+  }
+
+  @media (width >= $breakpoint) {
+  }
+
+  // __FORM
+  &__form {
+  }
+
+  // __SEARCH
+  &__search {
+  }
+
+  // __LIST
+  &__list {
+  }
+}

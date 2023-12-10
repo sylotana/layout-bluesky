@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Привет!\"",
-    "pretty-check": "prettier --check \"./src/**/*.{pug,html,scss,css,js}\"",
-    "pretty-fix": "prettier --write \"./src/**/*.{pug,html,scss,css,js}\"",
+    "pretty-check": "prettier --check \"./src/**/*.{html,scss,css,js}\"",
+    "pretty-fix": "prettier --write \"./src/**/*.{html,scss,css,js}\"",
     "lint-check": "stylelint \"./src/**/*.{scss,css}\"",
     "lint-fix": "stylelint \"./src/**/*.{scss,css}\" --fix",
     "pretty-lint-fix": "npm run pretty-fix && npm run lint-fix",
